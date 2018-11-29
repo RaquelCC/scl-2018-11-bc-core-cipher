@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     max-width: 1280px;
+    box-sizing: border-box;
 }
 
 a {
@@ -42,12 +43,14 @@ header {
     position: relative;
     top: 100px;
     display: none;
-    padding: 3rem;
+    padding: 2rem;
     max-width: 1280px;
     font-family: 'Ubuntu', sans-serif;
+    float: left;
+    margin-left: 3rem;
 }
 
-#texto {
+.texto {
     text-align: justify;
     resize: none;
     font-size: 1rem;
@@ -90,14 +93,16 @@ button {
 #pantallaResultado {
     display: none;
     position: relative;
-    top: 100px;
+    top: 120px;
+    width: 50%;
     width: 515px;
     height: 205px;
-    background-color: #FFE79A;
-    text-align: justify;
+    /* background-color: #FFE79A; */
+    /* text-align: justify; */
     font-size: 1rem;
     font-family: 'Ubuntu', sans-serif;
     padding: 10px;
+    /* float: right; */
 }
 
 #regresarInicio {
@@ -132,4 +137,12 @@ h3 {
     width: auto;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+#offsetYOtros {
+    position: relative;
+    right: 25px;
+    display: none;
+    margin: 0;
+    padding: 0;
 }

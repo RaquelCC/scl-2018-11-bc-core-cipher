@@ -17,7 +17,7 @@
       <div id="root">
         <h3>Bienvenid@!</h3>
         <div id="bienvenida">
-          <p>¿Alguna vez te ha tocado planificar un <strong>cumpleaños sorpresa</strong>? ¿Una <strong>despedida de soleter@</strong>? ¿Has tenido una conversación con tus amig@s que <strong>no quieres que nadie más se entere</strong>? O quizas simplemente quieres escribir algo y <strong>que nadie más sepa lo que dice</strong>.
+          <p>¿Alguna vez te ha tocado planificar un 🎂<strong>cumpleaños sorpresa</strong>🎂? ¿Una 💅<strong>despedida de solter@</strong>🍸? ¿Has tenido una conversación con tus amig@s que <strong>no quieres que nadie más se entere</strong>🙈🙉🙊? O quizas simplemente quieres escribir algo y <strong>que nadie más sepa lo que dice</strong>🈲.
           </p>
           <p>Si respondiste afirmativamente a alguna de las preguntas anteriores esta aplicación
             es para ti!
@@ -77,22 +77,26 @@
       
     </div>
     <div id="pantallaCifrado">
-      <textarea id="texto" rows="10" cols="63" placeholder="Escribe tu mensaje."></textarea>
+      <textarea class="texto" id="textoACifrar" rows="10" cols="52" placeholder="Mensaje a Cifrar"></textarea>
       <br/><br/>
+      <br/><br/>
+      <button id="cipher" type="button">Cipher</button>  
+    </div>
+    <div id="offsetYOtros">
       <input id="offset" type="text" placeholder="offset">
-      <br/><br/>
-      <button id="cipher" type="button">Cipher</button>  <button id="decipher" type="button">Decipher</button>
-      
       
     </div>
-    <br>
+    <!-- <br> -->
     <div id="pantallaResultado">
-      
+      <textarea class="texto" id="textoADescifrar" rows="10" cols="52" placeholder="Mensaje a Descifrar"></textarea>
+      <br/><br/>
+      <br/><br/>
+      <button id="decipher" type="button">Decipher</button>
     </div>
     
-    <div id="regresarInicio">
+    <!-- <div id="regresarInicio">
       <button type="button" id="inicio">Inicio</button>
-    </div>
+    </div> -->
     
     <script src="cipher.js"></script>
     <script src="index.js"></script>
