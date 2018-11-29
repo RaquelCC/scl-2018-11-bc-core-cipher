@@ -1,10 +1,10 @@
 window.cipher = {
   encode: (offset, texto) => {
-    offset = Number(offset);
-    if (Number.isNaN(offset)) {
-      alert('Debes ingresar un número en el offset.');
-    }
-    else {
+    // offset = Number(offset);
+    // if (Number.isNaN(offset)) {
+    //   alert('Debes ingresar un número en el offset.');
+    // }
+    // else {
     texto = String(texto);
     offset = Math.abs(offset);
     let message = texto.split('');
@@ -35,14 +35,14 @@ window.cipher = {
       else encodedMessage.push(letter);
     })
     return encodedMessage.join('');
-  }
+  // }
   },
   decode: (offset, texto) => {
-    offset = Number(offset);
-    if (Number.isNaN(offset)) {
-      alert('Debes ingresar un número en el offset.');
-    }
-    else {
+    // offset = Number(offset);
+    // if (Number.isNaN(offset)) {
+    //   alert('Debes ingresar un número en el offset.');
+    // }
+    // else {
     texto = String(texto);
     offset = Math.abs(offset);
     let message = texto.split('');
@@ -85,5 +85,5 @@ window.cipher = {
     })
     return decodedMessage.join('');
   }
-  }
+  // }
 };
