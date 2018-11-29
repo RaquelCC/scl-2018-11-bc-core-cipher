@@ -4,12 +4,98 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Wallpoet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   </head>
   <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
+    <header>
+      <h1>CAESAR CIPHER</h1>
+
+    </header>
+    <main>
+      <div id="root">
+        <h3>Bienvenid@!</h3>
+        <div id="bienvenida">
+          <p>¿Alguna vez te ha tocado planificar un <strong>cumpleaños sorpresa</strong>? ¿Una <strong>despedida de soleter@</strong>? ¿Has tenido una conversación con tus amig@s que <strong>no quieres que nadie más se entere</strong>? O quizas simplemente quieres escribir algo y <strong>que nadie más sepa lo que dice</strong>.
+          </p>
+          <p>Si respondiste afirmativamente a alguna de las preguntas anteriores esta aplicación
+            es para ti!
+          </p>
+          <p>En solo un par de pasos podrás <strong>cifrar</strong> tus mensajes para que solo quien 
+            <strong>tú</strong> decidas pueda leerlos.
+          </p>
+          <p>El método utilizado se llama "Cifrado Caesar" y es una de los primeras formar
+            conocidas de cifrar mensajes. Consiste en la sustitución de una letra por otra
+            que se encuentre un numero de posiciones (<em>offset</em>, el cual tú nos indicarás)
+            más adelante.
+          </p>
+          <div>
+            <img id="imagencifrado" src="images\imagencifrado.png" alt="Imagen cifrado Caesar">
+          </div>
+        </div>
+      <h3>Instrucciones:</h3>
+      <div id="instrucciones">
+        <ul>
+          <li>En la siguiente página podrás comenzar a cifrar tus mensajes. 
+            En ella encontraras un espacio para ingresar el texto que deseas cifrar 
+            y otro para ingresar el "offset" (número que indicará el desplazamiento 
+            utilizado para cifrar tu mensaje).
+          </li>
+          <li>Luego solo tendrás que darle click a "Cipher" o "Decipher" segun sea el caso 
+            y listo! La página desplegará hacia abajo tu mensaje cifrado/descifrado.
+          </li>
+        </ul>
+      </div>
+      <h3>Consideraciones Importantes!</h3>
+      <div id="consideraciones">
+        <ul>
+          <li>El offset ingresado debe ser un número entero positivo,
+            de lo contrario el programa automáticamente lo convertirá 
+            en uno que cumpla con estos requisitos.
+          </li>
+          <li>Dado que nuestro abecedario tiene 26 letras (sin incluír la Ñ), 
+            si ingresas un offset que sea multiplo de 26 no verás ningun resultado, 
+            esto no significa que el programa no esté funcionando, sino que al 
+            cambiar una letra por otra se dio una "vuelta de 360°", quedando en 
+            la misma posición que antes.<br> 
+            En este caso te sugerimos utilizar otro número.
+          </li>
+          <li>Por el momento nuestra aplicación solo tiene soporte para las letras (a-z y A-Z, sin 
+            tíldes) no se generará un error si ingresas otros caracteres, pero la aplicación simplemente 
+            los mantendrá tal como son ingresados, sin cifrarlos.
+          </li>
+        </ul>
+      </div>
+      <div id="paraComenzar">
+        <p>Cuando estes list@ para comenzar a cifrar/descifrar tus mensajes dale click al siguiente botón!</p>
+      </div>
+      <button id="comenzar" type="button"><a href="#">Comenzar!</a></button>
+      
+      
+      
+      
     </div>
+    <div id="pantallaCifrado">
+      <textarea id="texto" rows="10" cols="63" placeholder="Escribe tu mensaje."></textarea>
+      <br/><br/>
+      <input id="offset" type="text" placeholder="offset">
+      <br/><br/>
+      <button id="cipher" type="button">Cipher</button>  <button id="decipher" type="button">Decipher</button>
+      
+      
+    </div>
+    <br>
+    <div id="pantallaResultado">
+      
+    </div>
+    
+    <div id="regresarInicio">
+      <button type="button" id="inicio">Inicio</button>
+    </div>
+    
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+  </main>
   </body>
 </html>
