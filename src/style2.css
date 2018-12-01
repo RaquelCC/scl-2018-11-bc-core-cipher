@@ -1,0 +1,18 @@
+span {
+    font-family: 'Wallpoet', cursive;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#pantallaCifrado, #offsetYOtros, #pantallaResultado {
+    display: none;
+}
+
+textarea {
+    resize: none;
+    height: 100%;
+}

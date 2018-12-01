@@ -7,21 +7,39 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    
     <link rel="stylesheet" href="style2.css" />
     <link href="https://fonts.googleapis.com/css?family=Wallpoet" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
   </head>
   <body>
-    <header>
-      <h1>CAESAR CIPHER</h1>
-
-    </header>
-    <main class="container">
+      <div class="navbar-fixed">
+          <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo valign-wrapper center"><span>CAESAR CIPHER<span></a>
+              <ul class="left hide-on-small-only">
+                <li>
+                  <i class="material-icons">arrow_back_ios</i>
+                </li>
+                <li>
+                  <a href="#" id="inicio">
+                  Inicio</a>
+                </li>
+              </ul>
+              <ul class="right hide-on-small-only">
+                <li><a href="#" id="comenzar">Comenzar</a></li>
+                  <li>
+                    <i class="material-icons">arrow_forward_ios</i>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    <main class="row">
       <div id="root">
-        <h3>Bienvenid@!</h3>
-        <div id="bienvenida">
+        <div id="bienvenida" class="col s5 offset-s1">
+        <h5>Bienvenid@!</h5>
           <p>¿Alguna vez te ha tocado planificar un 🎂<strong>cumpleaños sorpresa</strong>🎂? ¿Una 💅<strong>despedida de solter@</strong>🍸? ¿Has tenido una conversación con tus amig@s que <strong>no quieres que nadie más se entere</strong>🙈🙉🙊? O quizas simplemente quieres escribir algo y <strong>que nadie más sepa lo que dice</strong>🈲.
           </p>
           <p>Si respondiste afirmativamente a alguna de las preguntas anteriores esta aplicación
@@ -36,11 +54,11 @@
             más adelante.
           </p>
           <div>
-            <img id="imagencifrado" src="images\imagencifrado.png" alt="Imagen cifrado Caesar">
+            <img id="imagencifrado" class="responsive-img" src="images\imagencifrado.png" alt="Imagen cifrado Caesar">
           </div>
         </div>
-      <h3>Instrucciones:</h3>
-      <div id="instrucciones">
+        <div id="instrucciones" class="col s5">
+        <h5>Instrucciones:</h5>
         <ul>
           <li>En la siguiente página podrás comenzar a cifrar tus mensajes. 
             En ella encontraras un espacio para ingresar el texto que deseas cifrar 
@@ -52,8 +70,8 @@
           </li>
         </ul>
       </div>
-      <h3>Consideraciones Importantes!</h3>
-      <div id="consideraciones">
+      <div id="consideraciones" class="col s5">
+      <h5>Consideraciones Importantes!</h5>
         <ul>
           <li>El offset ingresado debe ser un número entero positivo,
             de lo contrario el programa automáticamente lo convertirá 
@@ -72,41 +90,32 @@
           </li>
         </ul>
       </div>
-      <div id="paraComenzar">
-        <p>Cuando estes list@ para comenzar a cifrar/descifrar tus mensajes dale click al siguiente botón!</p>
+    </div>
+    <div class="row">
+    <div id="pantallaCifrado" class="col s4 offset-s1">
+      <div class="section">
+        <textarea class="texto" id="textoACifrar" rows="10" cols="52" placeholder="Mensaje a Cifrar"></textarea>
+        <button id="cipher" type="button">Cipher</button>  
       </div>
-      <button id="comenzar" type="button"><a href="#">Comenzar!</a></button>
-      
-      
-      
-      
     </div>
-    <div id="pantallaCifrado">
-      <textarea class="texto" id="textoACifrar" rows="10" cols="52" placeholder="Mensaje a Cifrar"></textarea>
-      <br/><br/>
-      <br/><br/>
-      <button id="cipher" type="button">Cipher</button>  
+    <div id="offsetYOtros" class="col s2">
+      <div class="section">
+        <input id="offset" type="text" placeholder="offset">
+      </div>      
     </div>
-    <div id="offsetYOtros">
-      <input id="offset" type="text" placeholder="offset">
+    <div id="pantallaResultado" class="col s4">
+      <div class="section">
+        <textarea class="texto" id="textoADescifrar" rows="10" cols="52" placeholder="Mensaje a Descifrar"></textarea>
+        <button id="decipher" type="button">Decipher</button>
+      </div>
+    </div>
+    </div>
       
-    </div>
-    <!-- <br> -->
-    <div id="pantallaResultado">
-      <textarea class="texto" id="textoADescifrar" rows="10" cols="52" placeholder="Mensaje a Descifrar"></textarea>
-      <br/><br/>
-      <br/><br/>
-      <button id="decipher" type="button">Decipher</button>
-    </div>
-    
-    <!-- <div id="regresarInicio">
-      <button type="button" id="inicio">Inicio</button>
-    </div> -->
-     <!-- Compiled and minified JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </main>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      
+      <script src="cipher.js"></script>
+      <script src="index.js"></script>
+    </main>
   </body>
-</html>
+  </html>
