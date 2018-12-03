@@ -52,3 +52,10 @@ textarea {
     text-align: justify;
 }
 
+#img_cifrado {
+    padding: 20px;
+}
+
+textarea {
+    background-color: white;
+}
