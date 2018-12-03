@@ -13,6 +13,8 @@ window.onload = () => {
         pantallaCifradoDiv.style.display = "block";
         document.getElementById("pantallaResultado").style.display = "block";
         document.getElementById("offsetYOtros").style.display = "block";
+        document.getElementById("leftNavigation").style.display = "block";
+        document.getElementById("rightNavigation").style.display = "none";
 
     })
     
@@ -72,7 +74,7 @@ window.onload = () => {
             alert('Debes ingresar un número en el offset.');
             return;
             }
-            document.getElementById("textoACifrar").value = cipher.encode(offset, texto);
+            document.getElementById("textoACifrar").value = cipher.decode(offset, texto);
         textareaDescifrar.blur();
         }
     });

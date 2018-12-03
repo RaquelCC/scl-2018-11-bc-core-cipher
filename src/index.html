@@ -17,8 +17,8 @@
       <div class="navbar-fixed">
           <nav>
             <div class="nav-wrapper">
-              <a href="#" class="brand-logo valign-wrapper center"><span>CAESAR CIPHER<span></a>
-              <ul class="left hide-on-small-only">
+              <a href="#" class="brand-logo valign-wrapper center"><span>CAESAR CIPHER</span></a>
+              <ul id="leftNavigation" class="left hide-on-small-only">
                 <li>
                   <i class="material-icons">arrow_back_ios</i>
                 </li>
@@ -27,7 +27,7 @@
                   Inicio</a>
                 </li>
               </ul>
-              <ul class="right hide-on-small-only">
+              <ul id="rightNavigation" class="right hide-on-small-only">
                 <li><a href="#" id="comenzar">Comenzar</a></li>
                   <li>
                     <i class="material-icons">arrow_forward_ios</i>
@@ -48,7 +48,7 @@
           <p>En solo un par de pasos podrás <strong>cifrar</strong> tus mensajes para que solo quien 
             <strong>tú</strong> decidas pueda leerlos.
           </p>
-          <p>El método utilizado se llama "Cifrado Caesar" y es una de los primeras formar
+          <p>El método utilizado se llama "Cifrado Caesar" y es una de las primeras formas
             conocidas de cifrar mensajes. Consiste en la sustitución de una letra por otra
             que se encuentre un numero de posiciones (<em>offset</em>, el cual tú nos indicarás)
             más adelante.
@@ -91,23 +91,17 @@
         </ul>
       </div>
     </div>
-    <div class="row">
-    <div id="pantallaCifrado" class="col s4 offset-s1">
-      <div class="section">
-        <textarea class="texto" id="textoACifrar" rows="10" cols="52" placeholder="Mensaje a Cifrar"></textarea>
-        <button id="cipher" type="button">Cipher</button>  
-      </div>
+    <div class="row section">
+    <div id="pantallaCifrado" class="col s4 offset-s1 center-align">
+      <textarea class="z-depth-1" id="textoACifrar" rows="10" cols="52" placeholder="Mensaje a Cifrar"></textarea>
+      <button id="cipher" type="button">Cipher</button>  
     </div>
-    <div id="offsetYOtros" class="col s2">
-      <div class="section">
-        <input id="offset" type="text" placeholder="offset">
-      </div>      
+    <div id="offsetYOtros" class="col s2 center">
+      <input id="offset" type="text" class="z-depth-1" placeholder="offset">
     </div>
-    <div id="pantallaResultado" class="col s4">
-      <div class="section">
-        <textarea class="texto" id="textoADescifrar" rows="10" cols="52" placeholder="Mensaje a Descifrar"></textarea>
-        <button id="decipher" type="button">Decipher</button>
-      </div>
+    <div id="pantallaResultado" class="col s4 center-align">
+      <textarea class="z-depth-1" id="textoADescifrar" rows="10" cols="52" placeholder="Mensaje a Descifrar"></textarea>
+      <button id="decipher" type="button" >Decipher</button>     
     </div>
     </div>
       
