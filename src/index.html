@@ -38,7 +38,7 @@
         </div>
     <main class="row">
       <div id="root">
-        <div id="bienvenida" class="col s5 offset-s1">
+        <div id="bienvenida" class="col s3 offset-s1">
         <h5>Bienvenid@!</h5>
           <p>¿Alguna vez te ha tocado planificar un 🎂<strong>cumpleaños sorpresa</strong>🎂? ¿Una 💅<strong>despedida de solter@</strong>🍸? ¿Has tenido una conversación con tus amig@s que <strong>no quieres que nadie más se entere</strong>🙈🙉🙊? O quizas simplemente quieres escribir algo y <strong>que nadie más sepa lo que dice</strong>🈲.
           </p>
@@ -48,29 +48,45 @@
           <p>En solo un par de pasos podrás <strong>cifrar</strong> tus mensajes para que solo quien 
             <strong>tú</strong> decidas pueda leerlos.
           </p>
-          <p>El método utilizado se llama "Cifrado Caesar" y es una de las primeras formas
+        </div>
+          <div class="col s4">
+            <div class="card">
+              <div class="card-image">
+                <img src="images\imagencifrado.png" class="responsive-img">
+                <!-- <span class="card-title">Caesar Cipher</span> -->
+              </div>
+              <div class="card-content">
+                <p>El método utilizado se llama "Cifrado Caesar" y es una de las primeras formas
+                  conocidas de cifrar mensajes. Consiste en la sustitución de una letra por otra
+                  que se encuentre un numero de posiciones (<em>offset</em>)
+                  más adelante.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank">Caesar Cipher en Wikipedia.</a>
+              </div>
+            </div>
+          </div>
+          <!-- <p>El método utilizado se llama <a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank">"Cifrado Caesar"</a> y es una de las primeras formas
             conocidas de cifrar mensajes. Consiste en la sustitución de una letra por otra
             que se encuentre un numero de posiciones (<em>offset</em>, el cual tú nos indicarás)
             más adelante.
           </p>
           <div>
             <img id="imagencifrado" class="responsive-img" src="images\imagencifrado.png" alt="Imagen cifrado Caesar">
+          </div> -->
+          <div id="instrucciones" class="col s3">
+            <h5>Instrucciones:</h5>
+            <ol>
+              <li>Ingresa el texto en la caja de cifrado o descifrado segun corresponda. 
+              </li>
+              <li>Ingresa el offset (desplazamiento). 
+              </li>
+              <li>Dale click al botón de "Cipher" o "Decipher" y listo!
+              </li>
+            </ol>
           </div>
         </div>
-        <div id="instrucciones" class="col s5">
-        <h5>Instrucciones:</h5>
-        <ul>
-          <li>En la siguiente página podrás comenzar a cifrar tus mensajes. 
-            En ella encontraras un espacio para ingresar el texto que deseas cifrar 
-            y otro para ingresar el "offset" (número que indicará el desplazamiento 
-            utilizado para cifrar tu mensaje).
-          </li>
-          <li>Luego solo tendrás que darle click a "Cipher" o "Decipher" segun sea el caso 
-            y listo! La página desplegará hacia abajo tu mensaje cifrado/descifrado.
-          </li>
-        </ul>
-      </div>
-      <div id="consideraciones" class="col s5">
+      <!-- <div id="consideraciones" class="col s5">
       <h5>Consideraciones Importantes!</h5>
         <ul>
           <li>El offset ingresado debe ser un número entero positivo,
@@ -89,19 +105,18 @@
             los mantendrá tal como son ingresados, sin cifrarlos.
           </li>
         </ul>
-      </div>
-    </div>
-    <div class="row section">
-    <div id="pantallaCifrado" class="col s4 offset-s1 center-align">
+      </div> -->
+    <div class="row section" id="pantallaApp">
+    <div id="pantallaCifrado" class="input-field col s4 offset-s1 center-align">
       <textarea class="z-depth-1" id="textoACifrar" rows="10" cols="52" placeholder="Mensaje a Cifrar"></textarea>
-      <button id="cipher" type="button">Cipher</button>  
+      <button id="cipher" class="red lighten-2 waves-effect waves-light btn-large" type="button">Cipher</button>  
     </div>
-    <div id="offsetYOtros" class="col s2 center">
-      <input id="offset" type="text" class="z-depth-1" placeholder="offset">
+    <div id="offsetYOtros" class="input-field col s2 center ">
+      <input id="offset" type="text" placeholder="OFFSET">
     </div>
-    <div id="pantallaResultado" class="col s4 center-align">
+    <div id="pantallaResultado" class="input-field col s4 center-align">
       <textarea class="z-depth-1" id="textoADescifrar" rows="10" cols="52" placeholder="Mensaje a Descifrar"></textarea>
-      <button id="decipher" type="button" >Decipher</button>     
+      <button id="decipher" class="red lighten-2 waves-effect waves-light btn-large" type="button" >Decipher</button>     
     </div>
     </div>
       
