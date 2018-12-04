@@ -79,7 +79,7 @@
             <ol>
               <li>Ingresa el texto en la caja de cifrado o descifrado segun corresponda. 
               </li>
-              <li>Ingresa el offset (desplazamiento). 
+              <li>Ingresa el offset (número de desplazamiento), <em>solo quien tenga este número podrá descifrar tu mensaje</em>. 
               </li>
               <li>Dale click al botón de "Cipher" o "Decipher" y listo!
               </li>
@@ -109,6 +109,7 @@
     <div class="row section" id="pantallaApp">
     <div id="pantallaCifrado" class="input-field col s4 offset-s1 center-align">
       <textarea class="z-depth-1" id="textoACifrar" rows="10" cols="52" placeholder="Mensaje a Cifrar"></textarea>
+      <button id="copiaCajaCifrado" class="btn-floating btn-large waves-effect waves-light red lighten-1 btn-small" title="Copiar"><i class="material-icons">file_copy</i>Copiar</button>
       <button id="cipher" class="red lighten-2 waves-effect waves-light btn-large" type="button">Cipher</button>  
     </div>
     <div id="offsetYOtros" class="input-field col s2 center ">
@@ -117,6 +118,7 @@
     <div id="pantallaResultado" class="input-field col s4 center-align">
       <textarea class="z-depth-1" id="textoADescifrar" rows="10" cols="52" placeholder="Mensaje a Descifrar"></textarea>
       <button id="decipher" class="red lighten-2 waves-effect waves-light btn-large" type="button" >Decipher</button>     
+      <button id="copiaCajaDescifrado" class="btn-floating btn-large waves-effect waves-light red lighten-1 btn-small" title="Copiar"><i class="material-icons">file_copy</i></button>
     </div>
     </div>
       

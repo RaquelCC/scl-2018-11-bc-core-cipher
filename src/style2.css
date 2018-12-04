@@ -37,7 +37,7 @@ textarea {
 }
 
 #cipher, #decipher {
-    margin-top: 30px;  
+    margin-top: 10px;  
 }
 
 #textoACifrar:focus {
@@ -58,4 +58,16 @@ textarea {
 
 textarea {
     background-color: white;
+}
+
+#copiaCajaCifrado, #copiaCajaDescifrado {
+    margin-top: 15px;
+}
+
+#copiaCajaCifrado {
+    margin-right: 40px;
+}
+
+#copiaCajaDescifrado {
+    margin-left: 40px;
 }

@@ -84,5 +84,21 @@ window.onload = () => {
         document.location = "index.html";
     })
 
+    document.getElementById("copiaCajaCifrado").addEventListener("click", () =>{
+        textareaCifrar.focus();
+        textareaCifrar.select();
+        document.execCommand("copy");
+        textareaCifrar.blur();
+
+    })
+
+    document.getElementById("copiaCajaDescifrado").addEventListener("click", () =>{
+        textareaDescifrar.focus();
+        textareaDescifrar.select();
+        document.execCommand("copy");
+        textareaDescifrar.blur();
+
+    })
+
 
 }
