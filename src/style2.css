@@ -34,6 +34,8 @@ textarea {
 
 #pantallaApp {
     padding-top: 100px;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 #cipher, #decipher {
@@ -70,4 +72,13 @@ textarea {
 
 #copiaCajaDescifrado {
     margin-left: 40px;
+}
+
+nav {
+    height: 80px;
+    line-height: 80px;
+}
+
+.vertical {
+    margin-top: 8px;
 }
