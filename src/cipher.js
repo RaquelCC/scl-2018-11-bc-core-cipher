@@ -65,15 +65,15 @@ window.cipher = {
         }
         encodedMessage.push(String.fromCharCode(codigoLetra));
       }
-      // para caracteres 128 a 254
-      else if (letter.charCodeAt() >= 128 && letter.charCodeAt() <= 254) {
+      // para caracteres 161 a 255
+      else if (letter.charCodeAt() >= 161 && letter.charCodeAt() <= 255) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra + (offset % 127);
-        if (codigoLetra>254) {
-          codigoLetra -= 127;
+        codigoLetra = codigoLetra + (offset % 95);
+        if (codigoLetra>255) {
+          codigoLetra -= 95;
         }
-        if (codigoLetra<128) {
-          codigoLetra += 127;
+        if (codigoLetra<161) {
+          codigoLetra += 95;
         }
         encodedMessage.push(String.fromCharCode(codigoLetra));
       }
@@ -148,15 +148,15 @@ window.cipher = {
         }
         decodedMessage.push(String.fromCharCode(codigoLetra));
       }
-      // para caracteres 128 a 254
-      else if (letter.charCodeAt() >= 128 && letter.charCodeAt() <=254) {
+      // para caracteres 161 a 255
+      else if (letter.charCodeAt() >= 161 && letter.charCodeAt() <=255) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra - (offset % 127);
-        if (codigoLetra<128) {
-          codigoLetra += 127;
+        codigoLetra = codigoLetra - (offset % 95);
+        if (codigoLetra<161) {
+          codigoLetra += 95;
         }
-        if (codigoLetra>254) {
-          codigoLetra -= 127;
+        if (codigoLetra>255) {
+          codigoLetra -= 95;
         }
         decodedMessage.push(String.fromCharCode(codigoLetra));
       }

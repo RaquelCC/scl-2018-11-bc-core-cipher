@@ -13,10 +13,10 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
   </head>
-  <body class="red lighten-5">
+  <body class="orange lighten-5">
       <div class="navbar-fixed">
           <nav>
-            <div class="nav-wrapper">
+            <div class="nav-wrapper orange darken-3">
               <a href="#" class="brand-logo valign-wrapper center"><span>CAESAR CIPHER</span></a>
               <ul id="leftNavigation" class="left hide-on-small-only">
                 <li>
@@ -77,11 +77,11 @@
           <div id="instrucciones" class="col s3">
             <h5>Instrucciones:</h5>
             <ol>
-              <li>Ingresa el texto en la caja de cifrado o descifrado segun corresponda. 
+              <li><strong>Ingresa el texto</strong> en la caja de cifrado o descifrado segun corresponda. 
               </li>
-              <li>Ingresa una clave para cifrar (offset o número de desplazamiento), <em>solo quien tenga este número podrá descifrar tu mensaje</em>. 
+              <li><strong>Ingresa una clave</strong> para cifrar (offset o número de desplazamiento), <em>solo quien tenga este número podrá descifrar tu mensaje</em>. 
               </li>
-              <li>Dale click al botón de "Cipher" o "Decipher" y listo!
+              <li><strong>Dale click</strong> al botón de "Cifrar" o "Descifrar" y listo!
               </li>
             </ol>
           </div>
@@ -108,17 +108,17 @@
       </div> -->
     <div class="row section" id="pantallaApp">
     <div id="pantallaCifrado" class="input-field col s4 offset-s1 center-align">
-      <textarea class="z-depth-1" id="textoACifrar" rows="10" cols="52" placeholder="Mensaje a Cifrar"></textarea>
-      <button id="copiaCajaCifrado" class="btn-floating btn-large waves-effect waves-light red lighten-1 btn-small" title="Copiar"><i class="material-icons">file_copy</i>Copiar</button>
-      <button id="cipher" class="red lighten-2 waves-effect waves-light btn-large" type="button">Cipher</button>  
+      <textarea class="z-depth-1" id="textoACifrar" rows="10" cols="52" placeholder="Ingresa aquí el mensaje que quieras cifrar"></textarea>
+      <button id="copiaCajaCifrado" class="btn-floating btn-large waves-effect waves-light orange darken-4 btn" title="Copiar"><i class="material-icons">file_copy</i>Copiar</button>
+      <button id="cipher" class="orange darken-3 waves-effect waves-light btn-large" type="button">Cifrar</button>  
     </div>
     <div id="offsetYOtros" class="input-field col s2 center ">
-      <input id="offset" type="text" placeholder="OFFSET">
+      <input id="offset" type="text" placeholder="CLAVE">
     </div>
     <div id="pantallaResultado" class="input-field col s4 center-align">
-      <textarea class="z-depth-1" id="textoADescifrar" rows="10" cols="52" placeholder="Mensaje a Descifrar"></textarea>
-      <button id="decipher" class="red lighten-2 waves-effect waves-light btn-large" type="button" >Decipher</button>     
-      <button id="copiaCajaDescifrado" class="btn-floating btn-large waves-effect waves-light red lighten-1 btn-small" title="Copiar"><i class="material-icons">file_copy</i></button>
+      <textarea class="z-depth-1" id="textoADescifrar" rows="10" cols="52" placeholder="Ingresa aquí el mensaje que quieras descifrar"></textarea>
+      <button id="decipher" class="orange darken-3 waves-effect waves-light btn-large" type="button" >Descifrar</button>     
+      <button id="copiaCajaDescifrado" class="btn-floating btn-large waves-effect waves-light orange darken-4 btn" title="Copiar"><i class="material-icons">file_copy</i></button>
     </div>
     </div>
   </main>  

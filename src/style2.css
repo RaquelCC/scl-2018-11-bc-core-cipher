@@ -25,11 +25,16 @@ textarea {
     text-align: center;
     /* border: 1px solid #9e9e9e; */
     width: 50%;
+    background-color: white;
+    border: 1px solid #9e9e9e;
+    border-radius: 5%;
 }
 
 #offset:focus {
-    border-bottom: 1px solid #E57373;
+    border: 1px solid #E57373;
     box-shadow: 0 1px 0 0#E57373;
+    box-shadow: none;
+ 
 }
 
 #pantallaApp {
@@ -81,4 +86,8 @@ nav {
 
 .vertical {
     margin-top: 8px;
+}
+
+#textoACifrar, #textoADescifrar {
+    border-radius: 1%;
 }
