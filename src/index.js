@@ -10,9 +10,11 @@ window.onload = () => {
     
     botonComenzar.addEventListener("click", ()=> {
         rootDiv.style.display = "none";
-        pantallaCifradoDiv.style.display = "inline-block";
-        document.getElementById("pantallaResultado").style.display = "inline-block";
-        document.getElementById("offsetYOtros").style.display = "inline-block";
+        pantallaCifradoDiv.style.display = "block";
+        document.getElementById("pantallaResultado").style.display = "block";
+        document.getElementById("offsetYOtros").style.display = "block";
+        document.getElementById("leftNavigation").style.display = "block";
+        document.getElementById("rightNavigation").style.display = "none";
 
     })
     
@@ -29,6 +31,23 @@ window.onload = () => {
         document.getElementById("textoADescifrar").value = cipher.encode(offset, texto);
         // document.getElementById("regresarInicio").style.display = "inline-block";
     });
+
+    const textareaCifrar = document.getElementById("textoACifrar");
+
+    textareaCifrar.addEventListener("keydown", (e) => {
+        if (e.keyCode === 13 && textareaCifrar.value && !e.shiftKey) {
+            let texto = document.getElementById("textoACifrar").value;
+            let offset = document.getElementById("offset").value;
+            offset = Number(offset);
+            if (Number.isNaN(offset) || !offset) {
+            textareaCifrar.blur();
+            alert('Debes ingresar un número en el offset.');
+            return;
+            }
+            document.getElementById("textoADescifrar").value = cipher.encode(offset, texto);
+            textareaCifrar.blur();
+        }
+    })
     
     const botonDecipher = document.getElementById("decipher");
     
@@ -43,10 +62,49 @@ window.onload = () => {
         // document.getElementById("regresarInicio").style.display = "inline-block";
     })
 
-    // const botonInicio = document.getElementById("inicio");
-    // botonInicio.addEventListener("click", () => {
-    //     document.location = "index.html";
-    // })
+    const textareaDescifrar = document.getElementById("textoADescifrar");
+
+    textareaDescifrar.addEventListener("keydown", (e) => {
+        if (e.keyCode === 13 && textareaDescifrar.value && !e.shiftKey) {
+            let texto = document.getElementById("textoADescifrar").value;
+            let offset = document.getElementById("offset").value;
+            offset = Number(offset);
+            if (Number.isNaN(offset) || !offset) {
+            textareaDescifrar.blur();
+            alert('Debes ingresar un número en el offset.');
+            return;
+            }
+            document.getElementById("textoACifrar").value = cipher.decode(offset, texto);
+        textareaDescifrar.blur();
+        }
+    });
+
+    const botonInicio = document.getElementById("inicio");
+    botonInicio.addEventListener("click", () => {
+        document.location = "index.html";
+    })
+
+    document.getElementById("copiaCajaCifrado").addEventListener("click", () =>{
+        textareaCifrar.focus();
+        textareaCifrar.select();
+        document.execCommand("copy");
+        textareaCifrar.blur();
+
+    })
+
+    document.getElementById("copiaCajaDescifrado").addEventListener("click", () =>{
+        textareaDescifrar.focus();
+        textareaDescifrar.select();
+        document.execCommand("copy");
+        textareaDescifrar.blur();
+
+    })
+
+    document.getElementById("clearFields").addEventListener("click", ()=> {
+        textareaCifrar.value = "";
+        textareaDescifrar.value = "";
+        document.getElementById("offset").value = "";
+    })
 
 
 }

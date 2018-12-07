@@ -1,0 +1,97 @@
+span {
+    font-family: 'Wallpoet', cursive;
+}
+
+
+#inicio, #comenzar {
+    text-decoration: none;
+    color: inherit;
+}
+
+#pantallaCifrado, #offsetYOtros, #pantallaResultado {
+    display: none;
+}
+
+textarea {
+    resize: none;
+    height: 100%;
+}
+
+#leftNavigation {
+    display: none;
+}
+
+#offset {
+    text-align: center;
+    /* border: 1px solid #9e9e9e; */
+    width: 50%;
+    background-color: white;
+    border: 1px solid #9e9e9e;
+    border-radius: 5%;
+}
+
+#offset:focus {
+    border: 1px solid #E57373;
+    box-shadow: 0 1px 0 0#E57373;
+    box-shadow: none;
+ 
+}
+
+#pantallaApp {
+    padding-top: 100px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#cipher, #decipher {
+    margin-top: 10px;  
+}
+
+#textoACifrar:focus {
+    outline-color: #E57373;
+} 
+#textoADescifrar:focus {
+    outline-color: #E57373;
+}
+
+#root {
+    margin-top: 30px;
+    text-align: justify;
+}
+
+#img_cifrado {
+    padding: 20px;
+}
+
+textarea {
+    background-color: white;
+}
+
+#copiaCajaCifrado, #copiaCajaDescifrado {
+    margin-top: 15px;
+}
+
+#copiaCajaCifrado {
+    margin-right: 40px;
+}
+
+#copiaCajaDescifrado {
+    margin-left: 40px;
+}
+
+nav {
+    height: 80px;
+    line-height: 80px;
+}
+
+.vertical {
+    margin-top: 8px;
+}
+
+#textoACifrar, #textoADescifrar {
+    border-radius: 1%;
+}
+
+#clearFields {
+    margin-top: 30px;
+}

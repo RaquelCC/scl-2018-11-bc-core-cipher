@@ -3,20 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <link rel="stylesheet" href="style2.css" />
     <link href="https://fonts.googleapis.com/css?family=Wallpoet" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
   </head>
-  <body>
-    <header>
-      <h1>CAESAR CIPHER</h1>
-
-    </header>
-    <main>
+  <body class="orange lighten-5">
+      <div class="navbar-fixed">
+          <nav>
+            <div class="nav-wrapper orange darken-3">
+              <a href="#" class="brand-logo valign-wrapper center"><span>CAESAR CIPHER</span></a>
+              <ul id="leftNavigation" class="left hide-on-small-only">
+                <li>
+                  <i class="material-icons vertical">arrow_back_ios</i>
+                </li>
+                <li>
+                  <a href="#" id="inicio">
+                  Inicio</a>
+                </li>
+              </ul>
+              <ul id="rightNavigation" class="right hide-on-small-only">
+                <li><a href="#" id="comenzar">Comenzar</a></li>
+                  <li>
+                    <i class="material-icons vertical">arrow_forward_ios</i>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    <main class="row">
       <div id="root">
-        <h3>Bienvenid@!</h3>
-        <div id="bienvenida">
+        <div id="bienvenida" class="col s3 offset-s1">
+        <h5>Bienvenid@!</h5>
           <p>¿Alguna vez te ha tocado planificar un 🎂<strong>cumpleaños sorpresa</strong>🎂? ¿Una 💅<strong>despedida de solter@</strong>🍸? ¿Has tenido una conversación con tus amig@s que <strong>no quieres que nadie más se entere</strong>🙈🙉🙊? O quizas simplemente quieres escribir algo y <strong>que nadie más sepa lo que dice</strong>🈲.
           </p>
           <p>Si respondiste afirmativamente a alguna de las preguntas anteriores esta aplicación
@@ -25,30 +48,47 @@
           <p>En solo un par de pasos podrás <strong>cifrar</strong> tus mensajes para que solo quien 
             <strong>tú</strong> decidas pueda leerlos.
           </p>
-          <p>El método utilizado se llama "Cifrado Caesar" y es una de los primeras formar
+        </div>
+          <div class="col s4">
+            <div class="card">
+              <div id="img_cifrado" class="card-image">
+                <img src="images\imagencifrado.png">
+                <!-- <span class="card-title">Caesar Cipher</span> -->
+              </div>
+              <div class="card-content">
+                <p>El método utilizado se llama "Cifrado Caesar" y es una de las primeras formas
+                  conocidas de cifrar mensajes. Consiste en la sustitución de una letra por otra
+                  que se encuentre un numero de posiciones (<em>offset</em>)
+                  más adelante.</p>
+              </div>
+              <div class="card-action center">
+                <a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank">Caesar Cipher en Wikipedia.</a>
+              </div>
+            </div>
+          </div>
+          <!-- <p>El método utilizado se llama <a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank">"Cifrado Caesar"</a> y es una de las primeras formas
             conocidas de cifrar mensajes. Consiste en la sustitución de una letra por otra
             que se encuentre un numero de posiciones (<em>offset</em>, el cual tú nos indicarás)
             más adelante.
           </p>
           <div>
-            <img id="imagencifrado" src="images\imagencifrado.png" alt="Imagen cifrado Caesar">
+            <img id="imagencifrado" class="responsive-img" src="images\imagencifrado.png" alt="Imagen cifrado Caesar">
+          </div> -->
+          <div id="instrucciones" class="col s3">
+            <h5>Instrucciones:</h5>
+            <ol>
+              <li><strong>Ingresa el texto</strong> en la caja de cifrado o descifrado segun corresponda. 
+              </li>
+              <li><strong>Ingresa un número clave</strong> para cifrar (offset o número de desplazamiento), <em>solo quien tenga este número podrá descifrar tu mensaje</em>. 
+              </li>
+              <li><strong>Dale click</strong> al botón de "Cifrar" o "Descifrar" y listo!
+              </li>
+            </ol>
+            <!-- <p>Si ingresas un número y ves que el texto cifrado es igual que el descifrado, prueba con otro. Los multiplos de 26 no cifran.</p> -->
           </div>
         </div>
-      <h3>Instrucciones:</h3>
-      <div id="instrucciones">
-        <ul>
-          <li>En la siguiente página podrás comenzar a cifrar tus mensajes. 
-            En ella encontraras un espacio para ingresar el texto que deseas cifrar 
-            y otro para ingresar el "offset" (número que indicará el desplazamiento 
-            utilizado para cifrar tu mensaje).
-          </li>
-          <li>Luego solo tendrás que darle click a "Cipher" o "Decipher" segun sea el caso 
-            y listo! La página desplegará hacia abajo tu mensaje cifrado/descifrado.
-          </li>
-        </ul>
-      </div>
-      <h3>Consideraciones Importantes!</h3>
-      <div id="consideraciones">
+      <!-- <div id="consideraciones" class="col s5">
+      <h5>Consideraciones Importantes!</h5>
         <ul>
           <li>El offset ingresado debe ser un número entero positivo,
             de lo contrario el programa automáticamente lo convertirá 
@@ -66,40 +106,28 @@
             los mantendrá tal como son ingresados, sin cifrarlos.
           </li>
         </ul>
-      </div>
-      <div id="paraComenzar">
-        <p>Cuando estes list@ para comenzar a cifrar/descifrar tus mensajes dale click al siguiente botón!</p>
-      </div>
-      <button id="comenzar" type="button"><a href="#">Comenzar!</a></button>
-      
-      
-      
-      
+      </div> -->
+    <div class="row section" id="pantallaApp">
+    <div id="pantallaCifrado" class="input-field col s4 offset-s1 center-align">
+      <textarea class="z-depth-1" id="textoACifrar" rows="10" cols="52" placeholder="Ingresa aquí el mensaje que quieras cifrar"></textarea>
+      <button id="copiaCajaCifrado" class="btn-floating btn-large waves-effect waves-light orange darken-4 btn" title="Copiar"><i class="material-icons">file_copy</i>Copiar</button>
+      <button id="cipher" class="orange darken-3 waves-effect waves-light btn-large" type="button">Cifrar</button>  
     </div>
-    <div id="pantallaCifrado">
-      <textarea class="texto" id="textoACifrar" rows="10" cols="52" placeholder="Mensaje a Cifrar"></textarea>
-      <br/><br/>
-      <br/><br/>
-      <button id="cipher" type="button">Cipher</button>  
+    <div id="offsetYOtros" class="input-field col s2 center ">
+      <input id="offset" type="text" placeholder="CLAVE">
+      <button id="clearFields" class="orange darken-3 waves-effect waves-light btn-large" type="button" >Limpiar</button> 
     </div>
-    <div id="offsetYOtros">
-      <input id="offset" type="text" placeholder="offset">
-      
+    <div id="pantallaResultado" class="input-field col s4 center-align">
+      <textarea class="z-depth-1" id="textoADescifrar" rows="10" cols="52" placeholder="Ingresa aquí el mensaje que quieras descifrar"></textarea>
+      <button id="decipher" class="orange darken-3 waves-effect waves-light btn-large" type="button" >Descifrar</button>     
+      <button id="copiaCajaDescifrado" class="btn-floating btn-large waves-effect waves-light orange darken-4 btn" title="Copiar"><i class="material-icons">file_copy</i></button>
     </div>
-    <!-- <br> -->
-    <div id="pantallaResultado">
-      <textarea class="texto" id="textoADescifrar" rows="10" cols="52" placeholder="Mensaje a Descifrar"></textarea>
-      <br/><br/>
-      <br/><br/>
-      <button id="decipher" type="button">Decipher</button>
     </div>
-    
-    <!-- <div id="regresarInicio">
-      <button type="button" id="inicio">Inicio</button>
-    </div> -->
-    
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </main>
+  </main>  
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
   </body>
-</html>
+  </html>
