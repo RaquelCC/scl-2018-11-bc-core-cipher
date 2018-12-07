@@ -1,7 +1,7 @@
 window.cipher = {
   encode: (offset, texto) => {
     texto = String(texto);
-    offset = Math.abs(offset);
+    // offset = Math.abs(offset);
     let message = texto.split('');
     let encodedMessage = [];
     message.forEach (letter => {
@@ -10,6 +10,10 @@ window.cipher = {
         codigoLetra =  codigoLetra + (offset % 26);
         if (codigoLetra>90) {
           codigoLetra -= 26;
+        }
+        // para que funcione con offsets negativos
+        if (codigoLetra<65) {
+          codigoLetra += 26;
         }
         encodedMessage.push(String.fromCharCode(codigoLetra));
       }
@@ -20,6 +24,9 @@ window.cipher = {
         if (codigoLetra>122) {
           codigoLetra -= 26;
         }
+        if (codigoLetra<97) {
+          codigoLetra += 26;
+        }
         encodedMessage.push(String.fromCharCode(codigoLetra));
       }
       // para caracteres 33 a 64
@@ -28,6 +35,9 @@ window.cipher = {
         codigoLetra = codigoLetra + (offset % 32);
         if (codigoLetra>64) {
           codigoLetra -= 32;
+        }
+        if (codigoLetra<33) {
+          codigoLetra += 32;
         }
         encodedMessage.push(String.fromCharCode(codigoLetra));
       }
@@ -38,6 +48,9 @@ window.cipher = {
         if (codigoLetra>96) {
           codigoLetra -= 6;
         }
+        if (codigoLetra<91) {
+          codigoLetra += 6;
+        }
         encodedMessage.push(String.fromCharCode(codigoLetra));
       }
       // para carcteres 123 a 126
@@ -47,14 +60,20 @@ window.cipher = {
         if (codigoLetra>126) {
           codigoLetra -= 4;
         }
+        if (codigoLetra<123) {
+          codigoLetra += 4;
+        }
         encodedMessage.push(String.fromCharCode(codigoLetra));
       }
-      // para caracteres 128 a 254
-      else if (letter.charCodeAt() >= 128 && letter.charCodeAt() <= 254) {
+      // para caracteres 161 a 255
+      else if (letter.charCodeAt() >= 161 && letter.charCodeAt() <= 255) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra + (offset % 127);
-        if (codigoLetra>254) {
-          codigoLetra -= 127;
+        codigoLetra = codigoLetra + (offset % 95);
+        if (codigoLetra>255) {
+          codigoLetra -= 95;
+        }
+        if (codigoLetra<161) {
+          codigoLetra += 95;
         }
         encodedMessage.push(String.fromCharCode(codigoLetra));
       }
@@ -65,7 +84,7 @@ window.cipher = {
   },
   decode: (offset, texto) => {
     texto = String(texto);
-    offset = Math.abs(offset);
+    // offset = Math.abs(offset);
     let message = texto.split('');
     let decodedMessage = [];
     message.forEach (letter => {
@@ -74,6 +93,10 @@ window.cipher = {
         codigoLetra = codigoLetra - (offset % 26);
         if (codigoLetra<65) {
           codigoLetra += 26;
+        }
+        // para que funcione con offsets negativos
+        if (codigoLetra>90) {
+          codigoLetra -= 26;
         }
         decodedMessage.push(String.fromCharCode(codigoLetra));
       }
@@ -84,6 +107,9 @@ window.cipher = {
         if (codigoLetra<97) {
           codigoLetra += 26;
         }
+        if (codigoLetra>122) {
+          codigoLetra -= 26;
+        }
         decodedMessage.push(String.fromCharCode(codigoLetra));
       }
       // para caracteres 33 a 64
@@ -92,6 +118,9 @@ window.cipher = {
         codigoLetra = codigoLetra - (offset % 32);
         if (codigoLetra<33) {
           codigoLetra += 32;
+        }
+        if (codigoLetra>64) {
+          codigoLetra -= 32;
         }
         decodedMessage.push(String.fromCharCode(codigoLetra));
       }
@@ -102,6 +131,9 @@ window.cipher = {
         if (codigoLetra<91) {
           codigoLetra += 6;
         }
+        if (codigoLetra>96) {
+          codigoLetra -= 6;
+        }
         decodedMessage.push(String.fromCharCode(codigoLetra));
       }
       // para caracteres 123 126
@@ -111,14 +143,20 @@ window.cipher = {
         if (codigoLetra<123) {
           codigoLetra += 4;
         }
+        if (codigoLetra>126) {
+          codigoLetra -= 4;
+        }
         decodedMessage.push(String.fromCharCode(codigoLetra));
       }
-      // para caracteres 128 a 254
-      else if (letter.charCodeAt() >= 128 && letter.charCodeAt() <=254) {
+      // para caracteres 161 a 255
+      else if (letter.charCodeAt() >= 161 && letter.charCodeAt() <=255) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra - (offset % 127);
-        if (codigoLetra<128) {
-          codigoLetra += 127;
+        codigoLetra = codigoLetra - (offset % 95);
+        if (codigoLetra<161) {
+          codigoLetra += 95;
+        }
+        if (codigoLetra>255) {
+          codigoLetra -= 95;
         }
         decodedMessage.push(String.fromCharCode(codigoLetra));
       }
