@@ -79,11 +79,12 @@
             <ol>
               <li><strong>Ingresa el texto</strong> en la caja de cifrado o descifrado segun corresponda. 
               </li>
-              <li><strong>Ingresa una clave</strong> para cifrar (offset o número de desplazamiento), <em>solo quien tenga este número podrá descifrar tu mensaje</em>. 
+              <li><strong>Ingresa un número clave</strong> para cifrar (offset o número de desplazamiento), <em>solo quien tenga este número podrá descifrar tu mensaje</em>. 
               </li>
               <li><strong>Dale click</strong> al botón de "Cifrar" o "Descifrar" y listo!
               </li>
             </ol>
+            <!-- <p>Si ingresas un número y ves que el texto cifrado es igual que el descifrado, prueba con otro. Los multiplos de 26 no cifran.</p> -->
           </div>
         </div>
       <!-- <div id="consideraciones" class="col s5">
@@ -114,6 +115,7 @@
     </div>
     <div id="offsetYOtros" class="input-field col s2 center ">
       <input id="offset" type="text" placeholder="CLAVE">
+      <button id="clearFields" class="orange darken-3 waves-effect waves-light btn-large" type="button" >Limpiar</button> 
     </div>
     <div id="pantallaResultado" class="input-field col s4 center-align">
       <textarea class="z-depth-1" id="textoADescifrar" rows="10" cols="52" placeholder="Ingresa aquí el mensaje que quieras descifrar"></textarea>

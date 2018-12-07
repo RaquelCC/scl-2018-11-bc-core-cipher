@@ -1,6 +1,12 @@
 # CAESAR CIPHER
+¿Alguna vez te ha tocado planificar un 🎂**cumpleaños sorpresa**🎂? ¿Una 💅**despedida de soltera/o**🍸? ¿Has tenido una conversación con tus amig@s que **no quieres que nadie más se entere**🙈🙉🙊? O quizas simplemente quieres escribir algo y **que nadie más sepa lo que dice**🈲.
 
-Es una página que permite cifrar mensajes utilizando una "clave de cifrado" (llamada offset o desplazamiento), que mueve las letras y caractéres(#$%@, etc) un determinado número de posiciones.
+Si respondiste afirmativamente a alguna de las preguntas anteriores esta aplicación
+es para ti!
+
+En solo un par de pasos podrás **cifrar** tus mensajes para que solo quien **tú** decidas pueda leerlos.
+
+**CAESAR CIPHER** es una página que permite cifrar mensajes utilizando una "clave de cifrado" (llamada offset o desplazamiento), que mueve las letras y caractéres(#$%@, etc) un determinado número de posiciones.
 
 ![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
@@ -8,9 +14,9 @@ Por ejemplo:
 
 - Ciframos la frase "Hola Mundo" con una clave de 5, se vería así: "Mtqf Rzsit".
 
-El producto esta enfocado a solucionar las necesidades que las personas pudieran tener al momento de querer esconder cierta información o de entregar mensajes a un grupo reducido de personas sin riesgo de que alguien más pueda leerlos.
+El producto esta enfocado a solucionar las necesidades que las personas pudieran tener al momento de querer esconder cierta información o de querer comunicarse con un grupo reducido de personas sin riesgo de que alguien más pueda leerlos.
 
-El usuario de Caesar Cipher es una persona socialmente activa, que quiere coordinar un evento sorpresa para alguno de sus amigos; o bien quienes quieran guardar una cierta información para si mismos, oculta de ojos curiosos. El rango etario puede variar, siendo esta aplicación útil tanto para jovenes como para personas mayores que tengan a lo menos un manejo de nivel usuario de un computador.
+El usuario de Caesar Cipher es una persona socialmente activa, que quiere coordinar un evento sorpresa para alguno de sus amigos; o bien quiere guardar una cierta información para si mismos, oculta de ojos curiosos. El rango etario puede variar, siendo esta aplicación útil tanto para jovenes como para personas mayores que tengan a lo menos un manejo de nivel usuario de un computador.
 
 # HISTORIAS DE USUARIO
 
@@ -37,7 +43,7 @@ El diseño inicial del producto buscaba tener colores calidos pero relativamente
 
 Luego de que el usuario presionaba el botón "Comenzar" accedía a la página que permitía el cifrado de mensajes. Esta contenía una caja para ingresar el mensaje que la persona quería cifrar o descifrar, y una caja para ingresar el offset. Luego, el usuario tenía la opción de presionar el boton de "Cifrar" o "Descifrar" lo cual generaba que se desplegara hacía abajo una caja que contenía el mensaje cifrado o descifrado, según el botón que se hubiera presionado.
 
-Inicialmente la aplicación solo podía cifrar letras, mayúsculas o minúsculas, sin acentuación, y sin la letra ñ/Ñ. El usuario era advertido de estas circunstancias en la página inicial. Tambien se le advertía sobre el el uso de números multiplos de 26 como clave de cifrado, lo cual no desplegaría ningun resultado en su mensaje cifrado ya que el programa al cambiar la posición de la letra volvería a quedar donde ella misma. Todo lo anterior era advertido al usuario mediante una sección de Consideraciones Importantes.
+**Inicialmente la aplicación solo podía cifrar letras, mayúsculas o minúsculas, sin acentuación, y sin la letra ñ/Ñ**. El usuario era advertido de estas circunstancias en la página inicial. Tambien se le advertía sobre el el uso de números multiplos de 26 como clave de cifrado, lo cual no desplegaría ningun resultado en su mensaje cifrado ya que el programa al cambiar la posición de la letra volvería a quedar donde ella misma se posicionaba. Todo lo anterior era advertido al usuario mediante una sección de *Consideraciones Importantes*.
 
 Los botones de cifrado y descifrado, así como la casilla del offset o desplazamiento estaban nombradas en ingles ("Cipher", "Decipher" y "offset", respectivamente)
 
@@ -55,10 +61,20 @@ El diseño inicial del producto fué testeado con 3 personas que nunca habían v
 
 ## SEGUNDO DISEÑO
 
-El segundo diseño trato de abordar la mayoría de los problemas planteados por los usuarios en la primera fase de testeo.
+El segundo diseño trató de abordar la mayoría de los problemas planteados por los usuarios en la primera fase de testeo.
 
-Para hacer la página más amigable al usuario se amplió la covertura de la aplicación para que cifrara ñ/Ñ, acentos y caractéres especiales, gracias a esto fue posible eliminar la sección de consideraciones importantes (en la que se advertía al usuario sobre no usar estos caractéres) de la página inicial. En conjunto con lo anterior se redujo todo el contenido de la página inicial para que el usuario no tuviera que hacer scroll en ella, sino que a penas ingresara a ella viera todo su contenido. Se creó una barra de navegación en la parte superior de la página y se colocó en ella el boton de comenzar para que fuera de facil acceso al usuario.
+Para hacer la página más amigable al usuario se amplió la covertura de la aplicación para que cifre ñ/Ñ, acentos y caractéres especiales, gracias a esto fue posible eliminar la sección de consideraciones importantes (en la que se advertía al usuario sobre no usar estos caractéres) de la página inicial. En conjunto con lo anterior se redujo todo el contenido de la página inicial para que el usuario no tuviera que hacer scroll en ella, sino que a penas ingresara a ella viera todo su contenido. Se creó una barra de navegación en la parte superior de la página y se colocó en ella el boton de comenzar para que fuera de facil acceso al usuario.
 
 En la página de cifrado, se renombraron los botones a "Cifrar" y "Descifrar" y a la caja para ingresar el "offset" se le puso el nombre de "clave" para que el usuario pudiera entender su utilidad más facilmente. Se colocaron 2 cajas para ingresar texto, en una se ingresa el texto que el usuario quiere cifrar y en la otra el texto que el usuario quiere descifrar, al medio se posiciona la caja para ingresar la clave. El texto cifrado se posiciona en la caja de texto a descifrar y viceversa.
 
-Se adicionó un boton de volver en la barra de navegación para que el usuario pueda volver a ver las instrucciones si lo estima necesario. Se agregaron botones para que se pueda copiar el texto cifrado o descifrado con un solo click.
+Se adicionó un boton de volver en la barra de navegación para que el usuario pueda volver a ver las instrucciones si lo estima necesario. Se agregaron botones para que se pueda copiar el texto cifrado o descifrado con un solo click. También se adicionó un boton que limpia todas las cajas de texto de la página, la deja limpia para ser usada nuevamente.
+
+En cuanto a la interacción del usuario con la aplicación, se habilitó que funcionara al presionar "enter" igual que como si se presionara el botón de "Cifrar" o "Descifrar", y se habilitó Shift+Enter para que cumpliera la función de saltar linea. Se dejó un único alert, para el caso que el usuario dejara el número de desplazamiento en blanco o no ingresara un número.
+
+## PROPUESTAS DE MEJORA
+
+Para versiones futuras de **Caesar Cipher** se buscará:
+
+- Generar un diseño responsive para que pueda usarse más facilmente desde dispositivos moviles.
+- Interconectar la aplicación con redes sociales de forma que el usuario pueda, con un solo click, enviar sus mensajes a través de Facebook, Gmail, o WhatsApp.
+- Solucionar el problema que se genera con los multiplos de 26, no cifran, de forma que el usuario no tenga que preocuparse por eso al momento de ingresar el desplazamiento.

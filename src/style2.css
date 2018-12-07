@@ -91,3 +91,7 @@ nav {
 #textoACifrar, #textoADescifrar {
     border-radius: 1%;
 }
+
+#clearFields {
+    margin-top: 30px;
+}

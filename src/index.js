@@ -100,5 +100,11 @@ window.onload = () => {
 
     })
 
+    document.getElementById("clearFields").addEventListener("click", ()=> {
+        textareaCifrar.value = "";
+        textareaDescifrar.value = "";
+        document.getElementById("offset").value = "";
+    })
+
 
 }
