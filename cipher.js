@@ -163,6 +163,7 @@ window.cipher = {
       // para caracteres 91 a 96
       else if (letter.charCodeAt() >= 91 && letter.charCodeAt() <=96) {
         let codigoLetra = letter.charCodeAt();
+        let offset4 = offset;
         if (offset4%6 === 0) {
           offset4--;
         }
@@ -180,7 +181,8 @@ window.cipher = {
         let codigoLetra = letter.charCodeAt();
         let offset5 = offset;
         if (offset5%4 === 0) {
-          
+        offset5++;
+        }
         codigoLetra = codigoLetra - (offset5 % 4);
         if (codigoLetra<123) {
           codigoLetra += 4;
@@ -206,10 +208,9 @@ window.cipher = {
         }
         decodedMessage.push(String.fromCharCode(codigoLetra));
       }
-      else {
-        decodedMessage.push(letter);
-      }
-      }
+        else {
+          decodedMessage.push(letter);
+        }
     })
     return decodedMessage.join('');
 
