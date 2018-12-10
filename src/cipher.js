@@ -7,7 +7,11 @@ window.cipher = {
     message.forEach (letter => {
       if (letter.charCodeAt() >= 65 && letter.charCodeAt() <=90) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra =  codigoLetra + (offset % 26);
+        let offset1 = offset;
+        if (offset1%26 === 0){
+          offset1++;
+        }
+        codigoLetra =  codigoLetra + (offset1 % 26);
         if (codigoLetra>90) {
           codigoLetra -= 26;
         }
@@ -20,7 +24,11 @@ window.cipher = {
       // para minusculas:
       else if (letter.charCodeAt() >= 97 && letter.charCodeAt() <=122) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra =  codigoLetra + (offset % 26);
+        let offset2 = offset;
+        if (offset2%26 === 0) {
+          offset2--;
+        }
+        codigoLetra =  codigoLetra + (offset2 % 26);
         if (codigoLetra>122) {
           codigoLetra -= 26;
         }
@@ -32,7 +40,11 @@ window.cipher = {
       // para caracteres 33 a 64
       else if (letter.charCodeAt() >= 33 && letter.charCodeAt() <= 64) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra + (offset % 32);
+        let offset3 = offset;
+        if (offset3%32 === 0) {
+          offset3++;
+        }
+        codigoLetra = codigoLetra + (offset3 % 32);
         if (codigoLetra>64) {
           codigoLetra -= 32;
         }
@@ -44,7 +56,11 @@ window.cipher = {
       // para caracteres 91 a 96
       else if (letter.charCodeAt() >= 91 && letter.charCodeAt() <= 96) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra + (offset % 6);
+        let offset4 = offset;
+        if (offset4%6 === 0) {
+          offset4--;
+        }
+        codigoLetra = codigoLetra + (offset4 % 6);
         if (codigoLetra>96) {
           codigoLetra -= 6;
         }
@@ -56,7 +72,11 @@ window.cipher = {
       // para carcteres 123 a 126
       else if (letter.charCodeAt() >= 123 && letter.charCodeAt() <= 126) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra + (offset % 4);
+        let offset5 = offset;
+        if (offset5%4 === 0) {
+          offset5++;
+        }
+        codigoLetra = codigoLetra + (offset5 % 4);
         if (codigoLetra>126) {
           codigoLetra -= 4;
         }
@@ -68,7 +88,11 @@ window.cipher = {
       // para caracteres 161 a 255
       else if (letter.charCodeAt() >= 161 && letter.charCodeAt() <= 255) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra + (offset % 95);
+        let offset6 = offset;
+        if (offset6%95 === 0) {
+          offset6--;
+        }
+        codigoLetra = codigoLetra + (offset6 % 95);
         if (codigoLetra>255) {
           codigoLetra -= 95;
         }
@@ -90,7 +114,11 @@ window.cipher = {
     message.forEach (letter => {
       if (letter.charCodeAt() >= 65 && letter.charCodeAt() <=90) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra - (offset % 26);
+        let offset1 = offset;
+        if (offset1%26 === 0){
+          offset1++;
+        }
+        codigoLetra = codigoLetra - (offset1 % 26);
         if (codigoLetra<65) {
           codigoLetra += 26;
         }
@@ -103,7 +131,11 @@ window.cipher = {
       // para minusculas:
       else if (letter.charCodeAt() >= 97 && letter.charCodeAt() <=122) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra - (offset % 26);
+        let offset2 = offset;
+        if (offset2%26 === 0){
+          offset2--;
+        }
+        codigoLetra = codigoLetra - (offset2 % 26);
         if (codigoLetra<97) {
           codigoLetra += 26;
         }
@@ -115,7 +147,11 @@ window.cipher = {
       // para caracteres 33 a 64
       else if (letter.charCodeAt() >= 33 && letter.charCodeAt() <=64) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra - (offset % 32);
+        let offset3 = offset;
+        if (offset3%32 === 0) {
+          offset3++;
+        }
+        codigoLetra = codigoLetra - (offset3 % 32);
         if (codigoLetra<33) {
           codigoLetra += 32;
         }
@@ -127,7 +163,10 @@ window.cipher = {
       // para caracteres 91 a 96
       else if (letter.charCodeAt() >= 91 && letter.charCodeAt() <=96) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra - (offset % 6);
+        if (offset4%6 === 0) {
+          offset4--;
+        }
+        codigoLetra = codigoLetra - (offset4 % 6);
         if (codigoLetra<91) {
           codigoLetra += 6;
         }
@@ -139,7 +178,10 @@ window.cipher = {
       // para caracteres 123 126
       else if (letter.charCodeAt() >= 123 && letter.charCodeAt() <=126) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra - (offset % 4);
+        let offset5 = offset;
+        if (offset5%4 === 0) {
+          
+        codigoLetra = codigoLetra - (offset5 % 4);
         if (codigoLetra<123) {
           codigoLetra += 4;
         }
@@ -151,7 +193,11 @@ window.cipher = {
       // para caracteres 161 a 255
       else if (letter.charCodeAt() >= 161 && letter.charCodeAt() <=255) {
         let codigoLetra = letter.charCodeAt();
-        codigoLetra = codigoLetra - (offset % 95);
+        let offset6 = offset;
+        if (offset6%95 === 0) {
+          offset6--;
+        }
+        codigoLetra = codigoLetra - (offset6 % 95);
         if (codigoLetra<161) {
           codigoLetra += 95;
         }
@@ -163,7 +209,10 @@ window.cipher = {
       else {
         decodedMessage.push(letter);
       }
+      }
     })
     return decodedMessage.join('');
+
   }
-};
+
+}
