@@ -95,3 +95,21 @@ nav {
 #clearFields {
     margin-top: 30px;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .brand-logo {
+        line-height: 30px;
+    }
+    #pantallaApp {
+        padding-top: 30px;
+    }
+    #offsetYOtros {
+        float: initial;
+        margin-bottom: 5px;
+    }
+    #pantallaResultado {
+        margin-top: 5px;
+    }
+
+}
