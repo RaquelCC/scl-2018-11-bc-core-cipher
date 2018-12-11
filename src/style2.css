@@ -113,3 +113,9 @@ nav {
     }
 
 }
+
+@media only screen and (max-width: 992px) {
+    #clearFields {
+        margin-top: 0;
+    }
+}
