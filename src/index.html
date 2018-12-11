@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -18,7 +20,7 @@
           <nav>
             <div class="nav-wrapper orange darken-3">
               <a href="#" class="brand-logo valign-wrapper center"><span>CAESAR CIPHER</span></a>
-              <ul id="leftNavigation" class="left hide-on-small-only">
+              <ul id="leftNavigation" class="left">
                 <li>
                   <i class="material-icons vertical">arrow_back_ios</i>
                 </li>
@@ -27,7 +29,7 @@
                   Inicio</a>
                 </li>
               </ul>
-              <ul id="rightNavigation" class="right hide-on-small-only">
+              <ul id="rightNavigation" class="right">
                 <li><a href="#" id="comenzar">Comenzar</a></li>
                   <li>
                     <i class="material-icons vertical">arrow_forward_ios</i>
@@ -38,7 +40,7 @@
         </div>
     <main class="row">
       <div id="root">
-        <div id="bienvenida" class="col s3 offset-s1">
+        <div id="bienvenida" class="col s12 m3 offset-m1 l3 offset-l1">
         <h5>Bienvenid@!</h5>
           <p>¿Alguna vez te ha tocado planificar un 🎂<strong>cumpleaños sorpresa</strong>🎂? ¿Una 💅<strong>despedida de solter@</strong>🍸? ¿Has tenido una conversación con tus amig@s que <strong>no quieres que nadie más se entere</strong>🙈🙉🙊? O quizas simplemente quieres escribir algo y <strong>que nadie más sepa lo que dice</strong>🈲.
           </p>
@@ -49,7 +51,7 @@
             <strong>tú</strong> decidas pueda leerlos.
           </p>
         </div>
-          <div class="col s4">
+          <div class="col s12 m4 l4">
             <div class="card">
               <div id="img_cifrado" class="card-image">
                 <img src="images\imagencifrado.png">
@@ -74,7 +76,7 @@
           <div>
             <img id="imagencifrado" class="responsive-img" src="images\imagencifrado.png" alt="Imagen cifrado Caesar">
           </div> -->
-          <div id="instrucciones" class="col s3">
+          <div id="instrucciones" class="col s12 m3 l3">
             <h5>Instrucciones:</h5>
             <ol>
               <li><strong>Ingresa el texto</strong> en la caja de cifrado o descifrado segun corresponda. 
@@ -108,19 +110,19 @@
         </ul>
       </div> -->
     <div class="row section" id="pantallaApp">
-    <div id="pantallaCifrado" class="input-field col s4 offset-s1 center-align">
+    <div id="pantallaCifrado" class="input-field col m12 l4 offset-l1 center-align">
       <textarea class="z-depth-1" id="textoACifrar" rows="10" cols="52" placeholder="Ingresa aquí el mensaje que quieras cifrar"></textarea>
-      <button id="copiaCajaCifrado" class="btn-floating btn-large waves-effect waves-light orange darken-4 btn" title="Copiar"><i class="material-icons">file_copy</i>Copiar</button>
+      <button id="copiaCajaCifrado" class="btn-floating btn-large waves-effect waves-light orange darken-4 btn hide-on-small-only" title="Copiar"><i class="material-icons">file_copy</i>Copiar</button>
       <button id="cipher" class="orange darken-3 waves-effect waves-light btn-large" type="button">Cifrar</button>  
     </div>
-    <div id="offsetYOtros" class="input-field col s2 center ">
+    <div id="offsetYOtros" class="input-field col m12 l2 center ">
       <input id="offset" type="text" placeholder="CLAVE">
-      <button id="clearFields" class="orange darken-3 waves-effect waves-light btn-large" type="button" >Limpiar</button> 
+      <button id="clearFields" class="orange darken-3 waves-effect waves-light btn-large hide-on-small-only" type="button" >Limpiar</button> 
     </div>
-    <div id="pantallaResultado" class="input-field col s4 center-align">
+    <div id="pantallaResultado" class="input-field col m12 l4 center-align">
       <textarea class="z-depth-1" id="textoADescifrar" rows="10" cols="52" placeholder="Ingresa aquí el mensaje que quieras descifrar"></textarea>
       <button id="decipher" class="orange darken-3 waves-effect waves-light btn-large" type="button" >Descifrar</button>     
-      <button id="copiaCajaDescifrado" class="btn-floating btn-large waves-effect waves-light orange darken-4 btn" title="Copiar"><i class="material-icons">file_copy</i></button>
+      <button id="copiaCajaDescifrado" class="btn-floating btn-large waves-effect waves-light orange darken-4 btn hide-on-small-only" title="Copiar"><i class="material-icons">file_copy</i></button>
     </div>
     </div>
   </main>  
